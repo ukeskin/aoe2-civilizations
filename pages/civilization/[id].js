@@ -19,8 +19,11 @@ export default function Civilization({ data }) {
             <h2 className="text-2xl font-semibold mb-2 border-l-8 border-blue-800 pl-2">
               Civilazation Bonus
             </h2>
-            {data.civilization_bonus.map((bonus) => (
-              <li className="text-blue-900 text-lg list-disc list-inside">
+            {data.civilization_bonus.map((bonus, index) => (
+              <li
+                key={index}
+                className="text-blue-900 text-lg list-disc list-inside"
+              >
                 {bonus}
               </li>
             ))}
